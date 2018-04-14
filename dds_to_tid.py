@@ -46,6 +46,7 @@ def tid_out(fn, texture, height, width):
     data = open(dat, "rb")
     header = data.read()
     parse_header(data)
+    data.close()
     with open(fn, "wb") as fpw:
         filename = os.path.basename(fn)
         fpw.seek(0)
